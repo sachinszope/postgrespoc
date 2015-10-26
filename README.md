@@ -40,3 +40,15 @@ Postgres POC using JDBC, JDBI and JOOQ
 
     Path Param:
       ID: User Id of which atttributes to be fetched
+
+<h2>Table Structure</h2>
+
+     Column           |         Type          |                        Modifiers                        
+    ------------------+-----------------------+---------------------------------------------------------
+      id              | integer               | not null default nextval('gooru_user_id_seq'::regclass)
+      user_name       | character varying(50) | not null
+      attributes      | json                  | 
+      attributes_text | character varying     | 
+      
+    Indexes:
+      "gooru_user_pkey" PRIMARY KEY, btree (id)
